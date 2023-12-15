@@ -1,32 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Dhurjati">
+  <title>Strona MIGDALSKI</title>
+  <script src="content.js"></script>
   <style>
-    a{
+    .panel a{
       text-decoration: none;
     }
-    #panel{
+    .panel, #panel{
+      display: flex;
+      justify-content: space-between;
       color: black;
+      font-family: 'Bebas Neue';
+      font-size: 20px;
+      background-color: #FFDF00;
+      z-index: 1000;
+      top: 0px;
+    }
+    .panel{
+      position: -webkit-sticky;
+      position: sticky; 
+    }
+    #panel{
+      margin-left: 30px;
     }
     #logo{
       font-family: 'Bebas Neue';
     }
     body{
-      background-color: brown;
+      background-color: #FFDF00;
+      margin: 0;
+    }
+    .media a{
+      margin-right: 10px;
+    }
+    .media{
+      display: flex;
+    }
+    .startDemo button{
+      background-color: black;
+      color: #FFDF00;
+      font-family: 'Bebas Neue';
+      font-size: 50px;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      padding: 30px 80px;
+      cursor: pointer;
+    }
+    .startDemo button:hover{
+      box-shadow: 0 0 5px white,
+      0 0 50px white, 0 0 75px white, 0 0 125px white, 0 0 225px white;
+      background-color: white;
+      color: lightgray;
+    }
+    .center{
+      display: flex;
+      margin-top: 15%;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Bebas Neue';
+    }
+    #main{
+      background-color: #FFDF00;
+      margin-bottom: 500px;
+    }
+    #bottom{
+      background-color: rgb(0, 0, 0);
+      padding-bottom: 800px;
+      color:#FFDF00;
+      display: flex;
+      margin: 0;
+      justify-content: space-between;
+    }
+    .contentPageA{
+      font-family: 'Bebas Neue';
+      font-size: 30px;
+    }
+    .contentPageA button{
+      background-color: #FFDF00;
+      color: black;
+      font-family: 'Bebas Neue';
+      font-size: 30px;
+      border: none;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      padding: 20px 60px;
+      cursor: pointer;
+      margin-left: 180px;
     }
   </style>
 </head>
 <body>
-  <div class="panel">
-    <div id="logo"><a href="Untitled-1.html", style="color: black;">MIGDALSKI</a></div>
-    <div>
+  <div class="panel", style="padding: 5px;">
+    <div id="logo"><a href="https://kajetanfilipmigdalski.github.io/", style="color: black;">MIGDALSKI</a></div>
+    <div class="media">
+      <a href="discord" target="_blank"><img src="media-icons/discord.png" width="20"></a>
+      <a href="facebook" target="_blank"><img src="media-icons/facebook.png" width="20"></a>
+      <a href="instagram" target="_blank"><img src="media-icons/instagram.png" width="20"></a>
+      <a href="reddit" target="_blank"><img src="media-icons/reddit.png" width="20"></a>
+      <a href="twitter" target="_blank"><img src="media-icons/twitter.png" width="20"></a>
+      <a href="https://www.youtube.com/channel/UCzUb-opJ5ciYaqcpii-mI3A" target="_blank"><img src="media-icons/youtube.png" width="20"></a>
+    </div>
+    <div class="doc", style="display: flex;">
       <a href="/", id="panel">KONTAKT</a>
       <a href="/", id="panel">O MNIE</a>
     </div>
   </div>
+  <section id="main">
+  <div class="center">
+    <div style="margin-bottom: 15px; font-size: 25px;">Dowiedz się o mnie więcej!</div>
+    <div class="startDemo" onclick="pageA()"><button>ROZPOCZNIJ DEMO</button></div>
+  </div>
+  </section>
+  <section id="bottom">
+    <div class="codeA" style="font-family: Dhurjati;">
+      <pre>
+        <div id="codeAnim"></div>
+      </pre>
+    </div>
+    <div class="contentPageA">
+      <div style="padding: 40px ; margin-right: 200px; margin-top: 200px;text-align: right;">
+        <pre style="font-family: 'Bebas Neue';">
+        Hobbistycznie używam języka HTML oraz CSS.
+        Uwielbiam bawić się designem i spędzam wiele
+        godzin swojego czasu na tworzeniu nowych
+        stron oraz poznawaniu nowych linijek kodu.
+        </pre>
+      </div>
+      <button>PRZEJDŹ DALEJ</button>
+    </div>
+  </section>
+  <script>
+    function pageA() {
+        const bottomElement = document.getElementById("bottom");
+        
+        if (bottomElement) {
+            bottomElement.scrollIntoView({ behavior: 'smooth'});
+        }
+    }
+</script>
 </body>
 </html>
